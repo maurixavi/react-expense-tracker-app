@@ -114,6 +114,16 @@ input[type='number']{
   margin: 0px 0px 12px 3px;
 }
 
+input[type='date'] {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  margin: 20px 0 20px;
+}
+
 input[type='text'] {
   border: 1px solid #dedede;
   border-radius: 2px;
@@ -142,7 +152,7 @@ input[type='text'] {
 .delete-btn:focus {
   outline: 0;
 }
-
+/*
 .list {
   list-style-type: none;
   padding: 0;
@@ -167,6 +177,96 @@ input[type='text'] {
 .list li.minus {
   border-right: 5px solid #c0392b;
 }
+*/
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: grid;
+  /*grid-template-columns: auto auto;*/
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li .transaction-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.list li .transaction-text {
+  font-weight: bold;
+}
+
+.list li .transaction-amount {
+  font-weight: bold;
+}
+
+.list li .transaction-date {
+  padding: 5px 0 0 0;
+  font-size: 14px;
+}
+
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+  border-right: 5px solid #c0392b;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  position: relative; 
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li .transaction-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.list li .transaction-text {
+  font-weight: bold;
+}
+
+.list li .transaction-amount {
+  font-weight: bold;
+}
+
+.list li .transaction-date {
+  padding: 5px 0 0 0;
+  font-size: 14px;
+}
+
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+  border-right: 5px solid #c0392b;
+}
 
 .delete-btn {
   cursor: pointer;
@@ -178,8 +278,8 @@ input[type='text'] {
   padding: 2px 5px;
   position: absolute;
   top: 50%;
-  left: 0;
-  transform: translate(-100%, -50%);
+  left: -24px;
+  transform: translateY(-50%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }

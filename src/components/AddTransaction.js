@@ -5,6 +5,7 @@ export const AddTransaction = () => {
 	const [text, setText] = useState('');
 	const [amount, setAmount] = useState(0);
 	const [type, setType] = useState('Expense');
+	const [date, setDate] = useState('');
 
 	const { addTransaction } = useContext(GlobalContext);
 	
@@ -15,7 +16,8 @@ export const AddTransaction = () => {
 			id: Math.floor(Math.random() * 100000000),
 			type,
 			text,
-			amount: type === "Income" ? +amount : -amount
+			amount: type === "Income" ? +amount : -amount,
+			date
 			//amount: +amount
 		}
 
@@ -42,6 +44,16 @@ export const AddTransaction = () => {
 
 			<div className="form-control">
 				<input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Description"></input>
+			</div>
+
+			<div className="form-control">
+				<input
+					type="date"
+					id="date"
+					value={date}
+					onChange={(e) => setDate(e.target.value)}
+					placeholder="Select date"
+				/>
 			</div>
 			
 			<button className="btn">Add {type}</button>
