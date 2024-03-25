@@ -10,8 +10,12 @@ export const Balance = () => {
 
   return (
 	<>
+	<div className="total-balance-container">
+		<div>
 		<h4>Total Balance</h4> 
 		<h1>${total}</h1> 
+		</div>
+	</div>
 	</>
 	
   )
