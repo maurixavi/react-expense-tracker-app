@@ -29,6 +29,7 @@ export const TransactionList = () => {
 			</div>
 			{transactions.length === 0 ? (
         <div className="no-transactions-container">
+					<img src="/leaf.png" alt="" />
           <p>You don't have any transactions yet</p>
         </div>
       ) : (

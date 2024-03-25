@@ -1,6 +1,6 @@
 import React, {useState, useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState';
-import { IoMdAddCircle } from "react-icons/io";
+import { IoAddCircle } from "react-icons/io5";
 
 export const AddTransaction = () => {
 	const [text, setText] = useState('');
@@ -42,7 +42,7 @@ export const AddTransaction = () => {
 		<>
       {!showAddTransaction && (
 				<div className="container-add-transaction">
-					<IoMdAddCircle className="add-icon" onClick={handleAddButtonClick} />
+					<IoAddCircle  className="add-icon" onClick={handleAddButtonClick} />
 				</div>
       )}
     {showAddTransaction && (
@@ -57,7 +57,9 @@ export const AddTransaction = () => {
           </div>
           <div className="form-control">
             <p>Amount</p>
-            <label className="amount-prefix">$</label><input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="" ></input>
+						<div className="amount-container">
+							<label className="amount-prefix">$</label><input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="" ></input>
+						</div>
           </div>
 
           <div className="form-control">
@@ -73,9 +75,10 @@ export const AddTransaction = () => {
               placeholder="Select date"
             />
           </div>
-          
-          <button  type="submit" className="btn">Add {type}</button>
-					<button type="button" className="btn" onClick={handleCancelClick}>Cancel</button>
+          <div className="add-cancel-form">
+						<button type="button" className="btn cancel-btn" onClick={handleCancelClick}>Cancel</button>
+						<button  type="submit" className="btn add-btn">Add {type}</button>
+					</div>
         </form>
       </>
     )}
