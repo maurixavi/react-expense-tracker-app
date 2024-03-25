@@ -287,3 +287,20 @@ input[type='text'] {
 .list li:hover .delete-btn {
   opacity: 1;
 }
+
+
+.transactions-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.filter-transactions-btn {
+  width: auto;
+  font-size: 14px;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
