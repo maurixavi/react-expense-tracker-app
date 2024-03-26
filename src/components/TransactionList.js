@@ -7,7 +7,7 @@ export const TransactionList = () => {
   const [showAll, setShowAll] = useState(false);
 
 	const transactionCount = transactions.length;
-	const recentTransactionsQuantity = 3;
+	const recentTransactionsQuantity = 5;
   // Sort transactions by date in descending order
   const sortedTransactions = transactions.sort((a, b) => new Date(b.date) - new Date(a.date));
   const displayedTransactions = showAll ? sortedTransactions : sortedTransactions.slice(0, recentTransactionsQuantity);
