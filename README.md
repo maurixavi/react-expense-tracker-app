@@ -2,7 +2,7 @@
 
 Expense Tracker App is a React web application that allows you to track your financial transactions, including the ability to add new transactions, view all transactions, or only the most recent ones, and get detailed information about the total balance, income balance, and expense balance separately.
 
-You can access the Expense Tracker application online by visiting the following domain: [Expense Tracker App]([https://expense-tracker-app-cyan.vercel.app/]).
+You can access the Expense Tracker application online by visiting the following domain: [Expense Tracker App](https://expense-tracker-app-cyan.vercel.app/)
 
 ## Features
 
